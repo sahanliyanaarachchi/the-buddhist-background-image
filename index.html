@@ -1,90 +1,9 @@
 <!DOCTYPE html>
-<html lang="si">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>රූපයක් පෙන්වන්නේ කොහොමද</title>
-  <style>
-    /* පොඩි ලැයිඛණයක් - රූපය මධ්‍යයේ දර්ශනය කරයි */
-    body {
-      font-family: "Noto Sans Sinhala", sans-serif;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      margin: 0;
-      background: #f3f4f6;
-      color: #111;
-      padding: 20px;
-    }
-
-    .card {
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-      max-width: 900px;
-      width: 100%;
-      padding: 18px;
-      text-align: center;
-    }
-
-    .img-wrap {
-      width: 100%;
-      height: 0;
-      padding-bottom: 56.25%; /* 16:9 ratio — වෙනස් කරන්න */
-      position: relative;
-      overflow: hidden;
-      border-radius: 10px;
-      margin-bottom: 12px;
-      background: #e9ecef;
-    }
-
-    .img-wrap img {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover; /* contain භාවිතා කළහොත් සම්පූර්ණ රූපය පෙන්වයි */
-      display: block;
-    }
-
-    .caption {
-      font-size: 14px;
-      color: #555;
-    }
-
-    /* පොඩි ලගුව — mobile-friendly */
-    @media (max-width:600px){
-      .card { padding: 12px; }
-    }
-  </style>
-</head>
+<html>
 <body>
-  <div class="card">
-    <h2>මෙන්න රූපය 👇</h2>
 
-    <!--
-      මෙහි src එකට:
-      1) local රූපයකට: "images/my-photo.jpg" වගේ path එකක් දාන්න (ඔබේ HTML ෆෝල්ඩරයට සරිලනව).
-      2) URL එකකට: "https://example.com/photo.jpg" වගේ remote URL එකක් දාන්න.
-      alt attribute එක සෑම විටම දාන්න — accessibility සහ SEO සඳහා උදව් කරයි.
-      loading="lazy" -> page load වේගය වඩා හොඳ කරයි (බ්‍රව්සරය නිරීක්ෂණය කළහොත් lazy-load කරයි).
-    -->
-    <div class="img-wrap">
-      <a href="https://via.placeholder.com/1600x900" target="_blank" rel="noopener">
-        <img
-          src="https://via.placeholder.com/1200x675"
-          alt="Udāharaṇayak — placeholder rūpayak"
-          loading="lazy"
-        />
-      </a>
-    </div>
+<h2>HTML Image</h2>
+<img src="bg.jpg" alt="Trulli" width="500" height="333">
 
-    <p class="caption">රූපය ක්ලික් කළහොත් විශාල ප්‍රමාණයෙන් අලුත් tab එකක විවෘත වේ.</p>
-
-    <p style="font-size:13px;color:#666;margin-top:12px;">
-      වෙනස් කරන්න: <code>src</code> එකට ඔබේ රූපයේ path හෝ URL දාන්න.
-    </p>
-  </div>
 </body>
 </html>
